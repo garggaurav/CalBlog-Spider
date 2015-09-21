@@ -1,5 +1,4 @@
-Uses Scrapy to crawl and parse all articles by The Daily Clog, a blog by The Daily Californian, for sentences with the word "You".
-
+Uses Scrapy to crawl and parse all articles by [The Daily Clog](http://www.dailycal.org/section/blogs/clog/), a blog by The Daily Californian, for sentences with the word "You".
 
 Requires Python and Scrapy. To run, go to the root directory and enter,
 
