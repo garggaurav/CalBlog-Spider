@@ -18,7 +18,7 @@ class MySpider(CrawlSpider):
         content = response.xpath("//div[@class='entry-content']").extract()
         post["title"] = title[0].replace("\u2019", "'").replace("\u2018", "'")
         post["link"] = url
-        post["content"] = [sentence.replace("\u2019", "'").replace("\u2018", "'") + '.' for sentence in str(content).split('.') if 'You' in sentence]
+        post["content"] = [sentence.replace("\u2019", "'").replace("\u2018", "'") + '.' for sentence in str(content).split('. |? |!') if 'You' in sentence]
         if post["content"]:
             return post
         else:
