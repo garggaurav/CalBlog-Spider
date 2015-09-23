@@ -23,7 +23,7 @@ class MySpider(CrawlSpider):
             post["title"] = title[0].replace("\u2019", "'").replace("\u2018", "'")
             post["link"] = url
             post["content"] = []
-            sentences = [sentence.replace("\u2019", "'").replace("\u2018", "'") for sentence in str(content).split('.') if 'You' in sentence]
+            sentences = [sentence.replace("\u2019", "'").replace("\u2018", "'").replace("\xa0", "") for sentence in str(content).split('.') if 'You' in sentence]
 
             if(len(sentences)>0):
                 for sentence in sentences:
